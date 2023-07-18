@@ -1,0 +1,1 @@
+This is a responsive website that shows my learning journey in front end development career path in SCRIMBA.
