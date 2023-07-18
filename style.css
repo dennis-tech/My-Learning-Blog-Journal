@@ -1,0 +1,285 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+body{
+    margin: 0 auto;
+    width: 415px;
+    background: #1E1E1E;
+}
+
+main{
+    background: #FFFFFF;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.625em;
+    background: #FFFFFF;
+    width: 100%;
+}
+
+.logo img{
+    width: 24px;
+    height: 24px;
+}
+
+.logo{
+    display: flex;
+    gap: 0.3rem;
+    margin-left: 1.25em;
+    
+}
+
+.logo h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #0E0E0E;
+}
+
+header ul{
+    list-style-type: none;
+    display: flex;
+    gap: 1.25rem;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.875rem; 
+    text-transform: uppercase;
+    color: #090909;
+    font-weight: 600;
+    margin-right: 1.43em; 
+    
+}
+
+
+header ul a{
+    text-decoration: none;
+    color: #090909;
+}
+
+
+.hero{
+    background-image: url(Images/article-image-hero.png);
+    background-size: cover;
+    height: 295px;
+    width: 100%;
+    color: #FFFFFF;
+    
+}
+
+.hero-date{
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    margin-left: 1.42em;
+    padding-top: 5.71em;
+}
+
+.hero-h2{
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-left: 0.625em;
+}
+
+.hero-paragraph{
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-left: 1.25em;
+}
+
+span{
+    display: block;  
+}
+
+/* section one */
+.blogs{
+    width: 100%;
+    text-align: center;
+}
+.section-one{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1.25em;
+    margin-bottom: 1.875em;
+    
+}
+
+.section-one p,
+.blog-h2{
+    text-align: left;
+    
+}
+
+.section-one p{
+    margin-left: 1.25em;
+    margin-right: 1.25em;
+}
+
+.blog-h2{
+    margin-left: 0.8333em;
+    
+}
+
+.view-more{
+    /* text-align: center; */
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 2.5em;
+
+}
+.view-more a{
+    color: #000000;
+    text-shadow: 0.0125em 0.03125em 0.0625em #000000;
+}
+
+
+footer{
+    text-align: center;
+    background: #202020;
+    padding: 2.5em;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ECECEC;
+    width: 100%;
+}
+
+.copyright{
+    font-weight: 400;
+    color: #D7D7D7;
+}
+
+.paragraph-date{
+    margin-top: 0.3125em;
+}
+
+.blog-h2,
+.paragraph-date{
+    margin-bottom: 0.3125em;
+}
+
+/* ABOUT ME */
+
+.profile-img{
+    width: 182px;
+    height: 182px;
+    border-radius: 50%;
+    margin-top: 1.25em;
+    margin-left: 1.25em;
+}
+
+.aboutMe{
+    
+    margin-bottom: 1.875em;
+    
+}
+
+.aboutMe p{
+    text-align: left;
+    margin-left: 1.25em;
+}
+
+
+.aboutMe h2{
+    margin-left: 0.571em;
+}
+.learningProgress{
+
+    margin-top: 1.25em;
+    margin-bottom: 1.875em;
+}
+
+.learningProgress p,
+.learningProgress h2{
+    text-align: left;
+    margin-left: 1.25em;
+}
+
+.learningProgress h2{
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: #151515;
+    margin-bottom: 0.8333em;
+}
+
+
+h3{
+    text-align: center;
+}
+
+.learningProgress-span{
+    display: block;
+    margin-top: 0.9375em;
+    margin-bottom: 0.9375em;
+}
+
+.aboutMe h2{
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 700;
+    font-size:2.188rem;
+    line-height: 1.5;
+    color: #151515;
+    margin-bottom: 0em;
+
+}
+
+.aboutMe p{
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #151515;
+    margin-top: 0.625em;
+    margin-bottom: 1.25em;
+}
+.recent-posts{
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: #000000;
+    margin-bottom: 1.111em;
+}
+
+/* VIEW MORE */
+
+.viewmore-hero img{
+    width: 375px;
+    height: 192px;
+    margin: 0 auto 1.875em auto;
+    display: block;
+    object-fit: cover;
+    object-position: 100% -30%;
+    border-radius: 0.1875em;
+}
+
+.viewmore-hero-date{
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-left: 1.25em;
+    color: #151515;
+    padding-top: 2.5em;
+}
+
+.hero-color{
+    color: #151515;
+}
+
+.hero-margin{
+    margin-top: 0.625em;
+}
+
