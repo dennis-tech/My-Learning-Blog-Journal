@@ -1,4 +1,4 @@
-*{
+*, *::before, *::after{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -6,53 +6,32 @@
     font-family: 'Source Sans 3', sans-serif;
 }
 
-body{
-    margin: 0 auto;
-    width: 415px;
-    background: #1E1E1E;
+
+
+/* --- HEADER --- */
+
+.banner,
+header,
+header ul{
+    display: flex;   
 }
 
-main{
-    background: #FFFFFF;
-}
-
-header{
-    display: flex;
-    justify-content: space-between;
-    padding: 0.625em;
-    background: #FFFFFF;
-    width: 100%;
-}
-
-.logo img{
-    width: 24px;
-    height: 24px;
-}
-
-.logo{
-    display: flex;
+.banner{
     gap: 0.3rem;
-    margin-left: 1.25em;
     
 }
 
-.logo h1{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    color: #0E0E0E;
+header ul,
+.hero-date{
+    text-transform: uppercase;
+
 }
 
 header ul{
     list-style-type: none;
-    display: flex;
     gap: 1.25rem;
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 0.875rem; 
-    text-transform: uppercase;
     color: #090909;
     font-weight: 600;
-    margin-right: 1.43em; 
     
 }
 
@@ -62,92 +41,125 @@ header ul a{
     color: #090909;
 }
 
+header{
+    justify-content: space-between;
+    padding: 0.625em;
+    width: 100%;  
+}
+
+.banner img{
+    width: 10%;
+    max-width: 24px;
+}
+
+.banner h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #0E0E0E;
+}
+
+header ul,
+.hero-date{
+    font-size: 0.875rem; 
+}
+
+/* --- HERO SECTION --- */
 
 .hero{
     background-image: url(Images/article-image-hero.png);
     background-size: cover;
-    height: 295px;
     width: 100%;
-    color: #FFFFFF;
-    
-}
-
-.hero-date{
-    font-family: 'Source Sans 3', sans-serif;
-    font-weight: 400;
-    font-size: 0.875rem;
-    margin-left: 1.42em;
-    padding-top: 5.71em;
-}
-
-.hero-h2{
-    font-family: 'Source Sans 3', sans-serif;
-    font-weight: 700;
-    font-size: 2rem;
-    margin-left: 0.625em;
-}
-
-.hero-paragraph{
-    font-family: 'Source Sans 3', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    margin-left: 1.25em;
-}
-
-span{
-    display: block;  
-}
-
-/* section one */
-.blogs{
-    width: 100%;
-    text-align: center;
-}
-.section-one{
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 1.25em;
     margin-bottom: 1.875em;
     
 }
 
-.section-one p,
-.blog-h2{
+.intro{
+    margin-left: 1.42em;
+    padding-top: 5.71em;
+    max-width: 500px;
+    width: 90%;
+    color: #ffffff;
+    margin-bottom: 1.42em;
+}
+
+.intro__date{
+    font-weight: 400;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+}
+
+.intro__h2{
+    font-weight: 700;
+    font-size: 2rem;
+    
+}
+
+.intro__paragraph{
+    font-weight: 400;
+    font-size: 1rem;
+    
+    
+}
+
+/* --- BLOGS SECTION --- */
+
+.blogs{
+    display: flex;
+    flex-direction: column;
+    gap: 1.875em;
+    text-align: center;
+
+}
+
+.blogs__hidden{
+    display: none;
+}
+
+.blogs__one img{
+    width: 100%;
+}
+
+.blogs__one{
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.blogs__one__date,
+.blogs__one__h2,
+.blogs__one__paragraph{
     text-align: left;
-    
 }
 
-.section-one p{
-    margin-left: 1.25em;
-    margin-right: 1.25em;
+.blogs__one__date{
+    margin-top: 0.625em;
+    text-transform: uppercase;
 }
 
-.blog-h2{
-    margin-left: 0.8333em;
-    
+.blogs__one__h2{
+    margin-top: 0.417em;
+    margin-bottom: 0.417em;
 }
 
-.view-more{
-    /* text-align: center; */
-    font-family: 'Source Sans 3', sans-serif;
+.view__more a{
     font-size: 1rem;
     font-weight: 600;
-    color: #000000;
-    margin-bottom: 2.5em;
-
-}
-.view-more a{
     color: #000000;
     text-shadow: 0.0125em 0.03125em 0.0625em #000000;
 }
 
+.view__more{
+    margin-bottom: 2.5em;
+}
+
+
+/* --- FOOTER --- */
 
 footer{
     text-align: center;
     background: #202020;
     padding: 2.5em;
-    font-family: 'Source Sans 3', sans-serif;
     font-size: 1rem;
     font-weight: 600;
     color: #ECECEC;
@@ -157,25 +169,64 @@ footer{
 .copyright{
     font-weight: 400;
     color: #D7D7D7;
+    display: block;
 }
 
-.paragraph-date{
-    margin-top: 0.3125em;
+/* --- VIEW__MORE --- */
+
+.view__more__hero__intro{
+    padding-top: 2.5em;
+    margin-left: 1.25em;
 }
 
-.blog-h2,
-.paragraph-date{
-    margin-bottom: 0.3125em;
+.view__more__hero__date{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #151515;
+    text-transform: uppercase;
 }
 
-/* ABOUT ME */
+.hero__color{
+    color: #151515;
+}
+
+.hero__margin{
+    margin-top: 0.625em;
+}
+
+.view__more__hero img{
+    width: 90%;
+    margin-top: 1.875em;
+    margin-bottom: 1.875em;
+    border-radius: 3px;
+}
+
+.hero__bottom{
+    margin-bottom: 0.625em;
+}
+
+.learning__progress{
+    
+}
+
+
+/* 
+
+
+
+
+
+
+
+
 
 .profile-img{
-    width: 182px;
-    height: 182px;
+    width: 50%;
+
     border-radius: 50%;
-    margin-top: 1.25em;
-    margin-left: 1.25em;
+    margin: 1.875em 0 0 1.25em;
+
 }
 
 .aboutMe{
@@ -193,40 +244,9 @@ footer{
 .aboutMe h2{
     margin-left: 0.571em;
 }
-.learningProgress{
 
-    margin-top: 1.25em;
-    margin-bottom: 1.875em;
-}
-
-.learningProgress p,
-.learningProgress h2{
-    text-align: left;
-    margin-left: 1.25em;
-}
-
-.learningProgress h2{
-    font-family: 'Source Sans 3', sans-serif;
-    font-weight: 700;
-    font-size: 1.125rem;
-    line-height: 1.5;
-    color: #151515;
-    margin-bottom: 0.8333em;
-}
-
-
-h3{
-    text-align: center;
-}
-
-.learningProgress-span{
-    display: block;
-    margin-top: 0.9375em;
-    margin-bottom: 0.9375em;
-}
 
 .aboutMe h2{
-    font-family: 'Source Sans 3', sans-serif;
     font-weight: 700;
     font-size:2.188rem;
     line-height: 1.5;
@@ -236,16 +256,42 @@ h3{
 }
 
 .aboutMe p{
-    font-family: 'Source Sans 3', sans-serif;
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.5;
     color: #151515;
-    margin-top: 0.625em;
-    margin-bottom: 1.25em;
+    margin: 0.625em 0 1.25em 1.25em;
 }
+
+.learningProgress{
+
+    
+
+}
+
+.learningProgress p{
+    text-align: left;
+    margin-left: 1.25em;
+}
+
+.learningProgress h2{
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: #151515;
+    margin-bottom: 0.8333em;
+    margin-top: 0.8333em;
+    margin-left: 1em;
+}
+
+
+h3{
+    text-align: center;
+}
+
+
+
 .recent-posts{
-    font-family: 'Source Sans 3', sans-serif;
     font-weight: 700;
     font-size: 1.125rem;
     line-height: 1.5;
@@ -253,33 +299,85 @@ h3{
     margin-bottom: 1.111em;
 }
 
-/* VIEW MORE */
 
-.viewmore-hero img{
-    width: 375px;
-    height: 192px;
-    margin: 0 auto 1.875em auto;
-    display: block;
-    object-fit: cover;
-    object-position: 100% -30%;
-    border-radius: 0.1875em;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(min-width: 1440px){
+
+   
+
+header{
+
+    padding: 1.25em;
+    
 }
 
-.viewmore-hero-date{
-    font-family: 'Source Sans 3', sans-serif;
-    font-weight: 400;
+.hero{
+  
+    padding-top: 15em;
+    padding-left: 2em;
+}
+ 
+.hero-date{
     font-size: 1rem;
-    line-height: 1.5;
+}
+
+.hero-h2{
+    font-size: 2.5rem;
+    margin-left: 0.49em;
+}
+
+.blogs{
+    width: 100%;
+    display: grid;
+    text-align: left;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2em;
+}
+
+.hidden-blog{
+    display: block;
+}
+
+.view-more{
+    grid-column: 2;
     margin-left: 1.25em;
-    color: #151515;
-    padding-top: 2.5em;
+    text-align: center;
 }
 
-.hero-color{
-    color: #151515;
+.section-one img{
+    width: 90%;
+   
+    margin-left: 1.25em;
 }
 
-.hero-margin{
-    margin-top: 0.625em;
+.logo h1{
+
+    font-size: 1rem;
+
 }
+
+}
+
+@media(min-width: 768px){
+    .hero{
+        height: 60vh;
+    }
+    .intro{
+        width: 80%;
+        padding-top: 100px;
+    }
+} */
 
