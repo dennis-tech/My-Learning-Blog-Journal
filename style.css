@@ -11,8 +11,8 @@
 /* --- HEADER --- */
 
 .banner,
-header,
-header ul{
+.navbar,
+.nav-menu{
     display: flex;   
 }
 
@@ -27,6 +27,26 @@ header ul,
 
 }
 
+.nav-link{
+    transition: 0.7s ease;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+    background-color: #0E0E0E;
+}
+
+
 header ul{
     list-style-type: none;
     gap: 1.25rem;
@@ -35,16 +55,28 @@ header ul{
     
 }
 
+.main__contact{
+    height: 100vh;
+}
 
 header ul a{
     text-decoration: none;
     color: #090909;
 }
 
-header{
+header ul a:hover,
+header ul a:focus,
+a.active{
+    color: #35078a;
+    border-bottom: 4px solid #35078a;
+    transition: .5s;
+}
+
+
+.navbar{
     justify-content: space-between;
     padding: 0.625em;
-    width: 100%;  
+    align-items: center;
 }
 
 .banner img{
@@ -70,6 +102,7 @@ header ul,
     background-image: url(Images/article-image-hero.png);
     background-size: cover;
     width: 100%;
+    min-height: 50vh;
     margin-bottom: 1.875em;
     
 }
@@ -77,7 +110,7 @@ header ul,
 .intro{
     margin-left: 1.42em;
     padding-top: 5.71em;
-    max-width: 500px;
+    max-width: 750px;
     width: 90%;
     color: #ffffff;
     margin-bottom: 1.42em;
@@ -174,9 +207,15 @@ footer{
 
 /* --- VIEW__MORE --- */
 
+.view__more{
+    text-align: center;
+    margin-top: 1.875em;
+}
+
 .view__more__hero__intro{
     padding-top: 2.5em;
-    margin-left: 1.25em;
+    margin: 0 auto;
+    width: 90%;
 }
 
 .view__more__hero__date{
@@ -186,6 +225,7 @@ footer{
     color: #151515;
     text-transform: uppercase;
 }
+
 
 .hero__color{
     color: #151515;
@@ -197,8 +237,9 @@ footer{
 
 .view__more__hero img{
     width: 90%;
-    margin-top: 1.875em;
-    margin-bottom: 1.875em;
+    margin: 0 auto;
+    display: block;
+    margin-top: 1em;
     border-radius: 3px;
 }
 
@@ -207,46 +248,53 @@ footer{
 }
 
 .learning__progress{
-    
+    margin: 0 auto;
+    width: 90%;
 }
 
 
-/* 
+.learning__progress h2{
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: #151515;
+    margin-bottom: 0.8333em;
+    margin-top: 0.8333em;
+}
+
+.recent__posts h3{
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: #000000;
+    margin: 1em 0;
+    text-align: center;
+    margin-top: 1.875em;
+}
+
+.blogs__bottom{
+    margin-bottom: 3em;
+}
 
 
 
 
+/* --- ABOUT ME --- */
 
 
 
+.about__me{
+    margin: 1.875em auto;
+    width: 90%;
+}
 
-
-.profile-img{
+.about__me__img{
     width: 50%;
-
-    border-radius: 50%;
-    margin: 1.875em 0 0 1.25em;
+    border-radius: 50%; 
 
 }
 
-.aboutMe{
-    
-    margin-bottom: 1.875em;
-    
-}
-
-.aboutMe p{
-    text-align: left;
-    margin-left: 1.25em;
-}
-
-
-.aboutMe h2{
-    margin-left: 0.571em;
-}
-
-
-.aboutMe h2{
+.about__me h2{
     font-weight: 700;
     font-size:2.188rem;
     line-height: 1.5;
@@ -255,129 +303,154 @@ footer{
 
 }
 
-.aboutMe p{
+.about__me p{
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.5;
     color: #151515;
-    margin: 0.625em 0 1.25em 1.25em;
-}
-
-.learningProgress{
-
-    
-
-}
-
-.learningProgress p{
-    text-align: left;
-    margin-left: 1.25em;
-}
-
-.learningProgress h2{
-    font-weight: 700;
-    font-size: 1.125rem;
-    line-height: 1.5;
-    color: #151515;
-    margin-bottom: 0.8333em;
-    margin-top: 0.8333em;
-    margin-left: 1em;
-}
-
-
-h3{
-    text-align: center;
+    margin: 0.625em 0 1.25em 0;
 }
 
 
 
-.recent-posts{
-    font-weight: 700;
-    font-size: 1.125rem;
-    line-height: 1.5;
-    color: #000000;
-    margin-bottom: 1.111em;
-}
+/* --- MEDIA QUERIES --- */
 
+@media(min-width: 540px){
 
+    .blogs{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media(min-width: 1440px){
-
-   
-
-header{
-
-    padding: 1.25em;
-    
-}
-
-.hero{
-  
-    padding-top: 15em;
-    padding-left: 2em;
-}
- 
-.hero-date{
-    font-size: 1rem;
-}
-
-.hero-h2{
-    font-size: 2.5rem;
-    margin-left: 0.49em;
-}
-
-.blogs{
-    width: 100%;
-    display: grid;
-    text-align: left;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 2em;
-}
-
-.hidden-blog{
-    display: block;
-}
-
-.view-more{
-    grid-column: 2;
-    margin-left: 1.25em;
-    text-align: center;
-}
-
-.section-one img{
-    width: 90%;
-   
-    margin-left: 1.25em;
-}
-
-.logo h1{
-
-    font-size: 1rem;
-
-}
-
-}
-
-@media(min-width: 768px){
-    .hero{
-        height: 60vh;
     }
-    .intro{
+} 
+
+@media(min-width: 1024px){
+
+    .blogs{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .banner h1{
+        font-size: 1.25rem;
+    }
+
+    header ul,
+    .hero-date{
+    font-size: 1rem; 
+    }
+
+    .banner img{
+        width: 10%;
+        max-width: 34px;
+    }
+
+    .learning__progress__margin{
+        margin-top: 4em;
+    }
+
+    .learning__progress,
+    .view__more__hero__intro{
+        width: 80%;       
+    }
+
+    .main{
+        background: #FAFAFA;
+    }
+
+    .about__me{
+        display: flex;
+        gap: 20px;
+        padding-top: 5em;
+    }
+
+    .about__me__text{
         width: 80%;
-        padding-top: 100px;
     }
-} */
+    .about__me__img{
+        width: 20%;
+        max-width: 200px;
+    
+    }
+
+    
+    .learning__progress h2,
+    .recent__posts h3,
+    .blogs__one__h2{
+        font-size: 1.5rem;
+    }
+
+    .learning__progress p{
+        font-size: 1.125rem;
+    }
+
+
+
+
+    .intro__h2{
+        font-size: 2.5rem;
+        
+    }
+
+    .banner{
+        margin-left: 1.42em;
+    }
+
+    header ul{
+        margin-right: 1.42em;
+    }
+
+    header{
+        padding:1.25em 0;
+    }
+
+    .intro{
+        padding-top: 12em;
+    }
+}
+
+@media(min-width: 2560px){
+
+    body{
+        width: 1440px;
+        margin: 0 auto;
+    }
+}
+
+@media(max-width: 425px){
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 40px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .nav-menu.active{
+        left: 0;
+    }
+}
 

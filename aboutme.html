@@ -12,84 +12,79 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        
-                <header>
 
-                    <div class="logo">
-                        <img src="Images/image 17.png" alt="Learning Journal logo">
-                        <h1>My learning journal</h1>
-                    </div>
-                    
-                    <ul>
-                        <li><a href="/main.html">Home</a></li>
-                        <li><a href="/aboutme.html">About me</a></li>
-                    </ul>
+        <header>
 
-                </header>
-
-            <main>
-
-                <section class="aboutMe">
-
-                    <img class="profile-img" src="Images/1637920013713 (2).jpg" alt="Dennis Stanley Kibe profile picture">
-                    <h2>Hi there! My name is <span> Dennis and welcome to <span> my learning journal.</h2>
-                    <p>
-                        After several months of learning in the Frontend <span> Developer Career Path, I've made the big jump over to <span>  the Bootcamp to 
-                        get expert code reviews of my Solo <span> Projects and meet like-minded peers.
-                    </p>
-
+            <nav class="navbar">
+                <div class="banner">
+                    <img src="Images/image 17.png" alt="Learning Journal logo">
+                    <h1>My learning journal</h1>
+                </div>
                 
+                
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a class=" nav-link" href="/main.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="active nav-link" href="/aboutme.html">About me</a>
+                        </li>
+                        
+                    </ul>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+            </nav>
+                           
 
-                </section>
+        </header>
 
-                <section class="learningProgress">
+            
+                <main class="main">
+                    <div class="about__me">
 
-                    <h2>How I stay committed to learning</h2>
-                    <p>
-                        I like to think of myself as a lifelong learner. I used to <span> spend hours and hours learning, 
-                        then try to create <span> simple projects using what I learned or work new <span>techniques into existing projects.
-                        <span class="learningProgress-span">
-                        While that was fun, I felt like it would be helpful to share <span> what I was learning and most things about my journey <span> with the world.
-                    </p>
+                        <img class="about__me__img" src="Images/1637920013713 (2).jpg" alt="Dennis Stanley Kibe profile picture">
 
-                    <h2>How I got started</h2>
-                    <p>
-                        I started simple and gradually grew my learning journal <span> site. I would take notes about what I was learning. 
-                        After <span> each learning session, I'd use my notes to not only <span> reflect on what I learned 
-                        but also write short summaries <span> of what I learned using my own words. <span class="learningProgress-span">
-                        That helped me grok what I was learning, and I realized <span> that posting my learning summaries was also helping <span> others learn and stay motivated.
-                    </p>
-
-                </section>
-
-                <section class="blogs">
-                    <section class="section-one">
-                        <h3 class="recent-posts">Recent posts</h3>
-                        <img src="Images/article-image-03.png" alt="article  hero image">
-                        <p class="paragraph-date">July 23, 2022</p>
-                        <h2 class="blog-h2">Blog one</h2>
-                        <p class="section-one-paragraph">I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.</p>
-
-                    </section>
+                        <div class="about__me__text">
+                            <h2>Hi there! My name is <span> Dennis and welcome to <span> my learning journal.</h2>
+                            <p>
+                                After several months of learning in the Frontend <span> Developer Career Path, I've made the big jump over to <span>  the Bootcamp to
+                                get expert code reviews of my Solo <span> Projects and meet like-minded peers.
+                            </p>
+                        </div>
                     
-                    <section class="section-one">
-                        <img src="Images/article-image-02.png" alt="article  hero image">
-                        <p class="paragraph-date">July 23, 2022</p>
-                        <h2 class="blog-h2">Blog two</h2>
-                        <p class="section-one-paragraph">I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.</p>
+                    </div>
+                    <section class="learning__progress ">
+                        <div class="learning__progress__margin">
+                            <h2>How I stay committed to learning</h2>
+                            <p>
+                                I like to think of myself as a lifelong learner. I used to  spend hours and hours learning,
+                                then try to create simple projects using what I learned or work new techniques into existing projects.
+                                While that was fun, I felt like it would be helpful to share what I was learning and most things about my journey with the world.
+                            </p>
+                            <h2>How I got started</h2>
+                            <p>
+                                I started simple and gradually grew my learning journal site. I would take notes about what I was learning.
+                                After each learning session, I'd use my notes to not only reflect on what I learned
+                                but also write short summaries of what I learned using my own words.
+                                That helped me grok what I was learning, and I realized that posting my learning summaries was also helping others learn and stay motivated.
+                            </p>
+                        </div>
                     </section>
-                    
-                    <section class="section-one">
-                        <img src="Images/article-image-01.png" alt="article  hero image">
-                        <p class="paragraph-date">July 23, 2022</p>
-                        <h2 class="blog-h2">Blog three</h2>
-                        <p class="section-one-paragraph">I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.</p>
+                    <div class="recent__posts">
+                        <h3>Recent posts</h3>
+                    </div>
+                    <section class="blogs blogs__bottom" id="blogs">
                     </section>
-                </section>
+                </main>
+
+        
             <footer>
                 My Learning Journal<span class="copyright">Copyright &copy;2022</span>
             </footer>
             
-</main>
+            <script src="/index.js" type="module"></script>
     </body>
 </html>
