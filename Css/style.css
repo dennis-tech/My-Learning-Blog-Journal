@@ -99,7 +99,7 @@ header ul,
 /* --- HERO SECTION --- */
 
 .hero{
-    background-image: url(Images/article-image-hero.png);
+    background-image: url(/Images/article-image-hero.png);
     background-size: cover;
     width: 100%;
     min-height: 50vh;

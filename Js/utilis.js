@@ -22,7 +22,7 @@ function getBlogsHtml(){
         const { img, date, title, content } = blog;
     blogsHtml += `
         <div class="blogs__one">
-                 <img id="blog__img" src="${img}" alt="blog" data-img="${title}">
+                 <a href="/Extra html pages/viewmore.html"><img id="blog__img" src="${img}" alt="blog" data-img="${title}"></a>
                 <p class="blogs__one__date">${date}</p>
                 <h2 class="blogs__one__h2">${title}</h2>
                 <p class="blogs__one__paragraph">${content}</p>
