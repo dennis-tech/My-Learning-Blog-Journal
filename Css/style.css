@@ -139,6 +139,8 @@ header ul,
 
 .blogs{
     display: flex;
+    flex-wrap: wrap;
+    flex: 1 200px;
     flex-direction: column;
     gap: 1.875em;
     text-align: center;
@@ -317,18 +319,19 @@ footer{
 
 @media(min-width: 540px){
 
-    .blogs{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+    /* .blogs{
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1 300px;
 
-    }
+    } */
 } 
 
 @media(min-width: 1024px){
 
-    .blogs{
+    /* .blogs{
         grid-template-columns: repeat(3, 1fr);
-    }
+    } */
 
     .banner h1{
         font-size: 1.25rem;
