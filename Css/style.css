@@ -13,7 +13,8 @@
 .banner,
 .navbar,
 .nav-menu{
-    display: flex;   
+    display: flex; 
+    user-select: none;  
 }
 
 .banner{
@@ -102,10 +103,11 @@ header ul,
     background-image: url(/Images/article-image-hero.png);
     background-size: cover;
     width: 100%;
-    min-height: 50vh;
-    margin-bottom: 1.875em;
+}
 
-    
+.hero:hover,
+.banner:hover{
+    cursor: pointer;
 }
 
 .intro{
@@ -132,7 +134,7 @@ header ul,
 .intro__paragraph{
     font-weight: 400;
     font-size: 1rem;
-    
+    padding-bottom: 1.75em;
     
 }
 
@@ -152,6 +154,9 @@ header ul,
 
 .blogs__one img{
     width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    height: 200px;
 }
 
 .blogs__one{
@@ -290,7 +295,10 @@ footer{
 }
 
 .about__me__img{
-    width: 50%;
+    width: 200px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
     border-radius: 50%; 
 
 }
@@ -362,16 +370,13 @@ footer{
         display: flex;
         gap: 20px;
         padding-top: 5em;
+        align-items: center;
     }
 
     .about__me__text{
         width: 80%;
     }
-    .about__me__img{
-        width: 20%;
-        max-width: 200px;
     
-    }
 
     
     .learning__progress h2,

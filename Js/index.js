@@ -29,7 +29,22 @@ document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', 
 }));
 
 
+//handle featured post click
 
+const heroClickSection = document.querySelector(".hero");
 
+if(heroClickSection){
+    heroClickSection.addEventListener('click', function(){
+        window.location.href = "/Extra html pages/viewmore.html";
+    });
+}
 
+// handle banner click
 
+const bannerClickSection = document.querySelector(".banner");
+
+if(bannerClickSection){
+    bannerClickSection.addEventListener('click', function(){
+        window.location.href = "/index.html";
+    });
+}
